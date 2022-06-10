@@ -1,0 +1,12 @@
+{
+    "name":"verfallen_download_pdf_extension",
+    "version":"0.0.1",
+    "description":"Batch download pdf files",
+    "manifest_version":3,
+    "browser_action":{
+        "default_icon":"icon.png",
+        "default_title":"pdf_downloader",
+        "default_popup":"popup.html"
+    }
+
+}
