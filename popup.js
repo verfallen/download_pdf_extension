@@ -2,7 +2,7 @@ function unique(arr) {
   return Array.from(new Set(arr));
 }
 
-function getPDFLinks() {
+function downPDFS() {
   const links = unique(
     Array.from(document.querySelectorAll("a"))
       .filter((v) => v.href.endsWith(".pdf"))
@@ -19,6 +19,6 @@ btn.addEventListener("click", async () => {
 
   chrome.scripting.executeScript({
     target: { tabId: tab.id },
-    function: getPDFLinks,
+    function: downPDFS,
   });
 });
