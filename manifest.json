@@ -1,5 +1,5 @@
 {
-  "name": "verfallen_download_pdf_extension",
+  "name": "download_pdf_extension",
   "version": "0.0.1",
   "description": "Grab pdf links and download them.",
   "manifest_version": 3,
