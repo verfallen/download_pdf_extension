@@ -1,7 +1,13 @@
+function unique(arr) {
+  return Array.from(new Set(arr));
+}
+
 function getPDFLinks() {
-  const links = Array.from(document.querySelectorAll("a"))
-    .filter((v) => v.href.endsWith(".pdf"))
-    .map((v) => ({ name: v.text || v.href.split("/")[-1], url: v.href }));
+  const links = unique(
+    Array.from(document.querySelectorAll("a"))
+      .filter((v) => v.href.endsWith(".pdf"))
+      .map((v) => ({ name: v.text || v.href.split("/")[-1], url: v.href }))
+  );
 
   chrome.runtime.sendMessage({ type: "down_all", links });
 }
