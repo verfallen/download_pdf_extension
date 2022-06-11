@@ -11,12 +11,5 @@
   "background": {
     "service_worker": "background.js"
   },
-  "content_scripts": [
-    {
-      "matches": ["<all_urls>"],
-      "js": ["js/content-script.js"],
-      "run_at": "document_start"
-    }
-  ],
   "permissions": ["storage", "activeTab", "downloads", "scripting"]
 }
